@@ -37,21 +37,21 @@ export class ApiService {
     return this.httpClient.get<ProductsList>(url);
   }
   getProductDetails(id: string): Observable<Product> {
-    const url = `${ApiService.BASE_URL}` + id;
+    const url = `${ApiService.BASE_URL}/` + id;
     return this.httpClient.get<Product>(url);
   }
 
   getCategoriesList(): Observable<any> {
-    const url = `${ApiService.BASE_URL}category-list`;
+    const url = `${ApiService.BASE_URL}/category-list`;
     return this.httpClient.get(url);
   }
   getProductByCategory(category: string): Observable<ProductsList> {
-    const url = `${ApiService.BASE_URL}category/` + category;
+    const url = `${ApiService.BASE_URL}/category/` + category;
     return this.httpClient.get<ProductsList>(url);
   }
 
   getProductByKeyWord(searchKey: any): Observable<ProductsList> {
-    const url = `${ApiService.BASE_URL}search?q=${searchKey}`;
+    const url = `${ApiService.BASE_URL}/search?q=${searchKey}`;
     return this.httpClient.get<ProductsList>(url);
   }
 }

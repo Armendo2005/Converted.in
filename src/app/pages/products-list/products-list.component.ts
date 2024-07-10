@@ -1,23 +1,24 @@
-import { Component, OnInit  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { SidebarComponent } from '../../core/layout/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-products-list',
   standalone: true,
-  imports: [],
+  imports: [SidebarComponent],
   templateUrl: './products-list.component.html',
-  styleUrl: './products-list.component.scss'
+  styleUrl: './products-list.component.scss',
 })
 export class ProductsListComponent implements OnInit {
   products: any[] = [];
-  categories: any[] = [];
+  brands: any[] = [];
   searchKeyword: string = '';
   categoryFilter: string = '';
-  priceRangeFilter: { min: number, max: number } = { min: 0, max: 10000 };
+  priceRangeFilter: { min: number; max: number } = { min: 0, max: 10000 };
   currentPage: number = 1;
   itemsPerPage: number = 10;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
     this.getProducts();
@@ -25,14 +26,13 @@ export class ProductsListComponent implements OnInit {
 
   getProducts(): void {
     const apiUrl = 'https://dummyjson.com/products?limit=100';
-    this.http.get<any>(apiUrl).subscribe(data => {
+    this.http.get<any>(apiUrl).subscribe((data) => {
       this.products = data.products;
-      
     });
 
-    this.http.get<any>(apiUrl).subscribe(data => {
-      this.categories = data.products[0].category;
-      console.log(this.categories);
+    this.http.get<any>(apiUrl).subscribe((data) => {
+      this.brands = data.products[0].brand;
+      console.log(this.brands);
     });
   }
 
