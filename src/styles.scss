@@ -5,3 +5,27 @@ body{
   background-color:$secondry-color ;
   font-family:$main-font-en ;
 }
+
+/*------Change Scrollbar------*/
+.flipped{
+  direction: rtl;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

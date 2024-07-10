@@ -1,1 +1,12 @@
-<p>brands-list works!</p>
+<div id="brandsList" class="flipped">  
+<ul class="nav flex-column">
+  <ng-container *ngFor="let brand of brandArray; let i = index">
+    <li class="nav-item">      
+        <span>
+          <a class="nav-link">{{brand}}</a>           
+        </span>      
+      <span class="badge badge-pill badge-secondary">{{ brand.qty }}</span>
+    </li>
+  </ng-container>
+</ul>
+</div>

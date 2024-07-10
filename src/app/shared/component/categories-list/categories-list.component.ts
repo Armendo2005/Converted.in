@@ -24,7 +24,7 @@ export class CategoriesListComponent implements OnInit {
     
     this.apiService.getCategoriesList().subscribe((categories) => {
      this.Categories = categories;
-     console.log(this.Categories);
+    //  console.log(this.Categories);
    });
   }
 }

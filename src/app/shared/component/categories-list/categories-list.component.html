@@ -1,5 +1,10 @@
-<ul>
-  <ng-container *ngFor="let category of Categories">
-    <li>{{category}}</li>
+
+<div id="categoriesList" class="flipped">  
+  <ul class="nav flex-column">
+    <ng-container *ngFor="let category of Categories">
+    <li class="nav-item">
+      <a class="nav-link">{{category}}</a>      
+    </li>
   </ng-container>
 </ul>
+</div>

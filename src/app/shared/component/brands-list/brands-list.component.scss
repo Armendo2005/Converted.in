@@ -1,0 +1,18 @@
+#brandsList{
+  max-height: 345px;
+  overflow-y: auto;
+  max-width: 200px;
+  .nav{
+    .nav-item{
+      .nav-link{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 43px;
+        color: #344054;
+        text-transform: capitalize;
+        text-align: left;
+        --bs-nav-link-padding-y: 0.1rem;
+      }
+    }
+  }
+}
