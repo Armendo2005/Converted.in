@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+// Colors
+$main-color: #002985;
+$main-color-light: #E6ECFC;
+$secondry-color: #f9fafb;
+$secondr-color-dark: #101828;
+$secondry-color-light: #f5f5f5;
+$black: #000000;
+$white: #ffffff;
+
+// media query Screens
+$maxMobile: "(max-width:575px)"; // from 0 to max mobile   // xs
+$minSmall: "(min-width:576px)"; // from small to up        // sm
+$maxSmall: "(max-width:767px)"; // from 0 to max small     // sm
+$minMedium: "(min-width:768px)"; // from medium to up        // medium
+$maxMedium: "(max-width:991px)"; // from 0 to max medium        // medium
+$minLarge: "(min-width:992px)"; // from large to up        // large
+$minXlarge: "(min-width:1200px)"; // from xlarge to up        // xl
+
+// Fonts
+$main-font-en: "Inter"; 
+

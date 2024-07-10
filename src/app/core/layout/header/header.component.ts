@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  searchKeyword: string = ''; // Add this variable to your Angular component
+
 }

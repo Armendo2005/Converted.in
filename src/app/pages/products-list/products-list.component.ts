@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductsListComponent implements OnInit {
   products: any[] = [];
+  categories: any[] = [];
   searchKeyword: string = '';
   categoryFilter: string = '';
   priceRangeFilter: { min: number, max: number } = { min: 0, max: 10000 };
@@ -26,7 +27,12 @@ export class ProductsListComponent implements OnInit {
     const apiUrl = 'https://dummyjson.com/products?limit=100';
     this.http.get<any>(apiUrl).subscribe(data => {
       this.products = data.products;
-      console.log(this.products);
+      
+    });
+
+    this.http.get<any>(apiUrl).subscribe(data => {
+      this.categories = data.products[0].category;
+      console.log(this.categories);
     });
   }
 

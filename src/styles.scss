@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@use "assets/sass/variables"as *;
+
+body{
+  background-color:$secondry-color ;
+  font-family:$main-font-en ;
+}

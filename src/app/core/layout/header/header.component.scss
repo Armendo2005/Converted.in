@@ -1,0 +1,31 @@
+@use "../../../../assets/sass/variables.scss" as *;
+
+#header{
+  .header-top{
+    background-color: $main-color;
+    height: 63px;
+    display: flex;
+    align-items: center;
+    .navbar-nav {
+      .nav-item a, .nav-item i{
+        color: $white;
+      }
+    }
+  }
+   .header-bottom{
+     background-color: $main-color-light;     
+     .navbar-nav{
+      gap: 24px;
+       .nav-item{
+         a{
+          font-size: 13px;          
+          font-weight: 600;          
+          text-transform: uppercase;
+          color:$secondr-color-dark;
+          padding-left: 0;   
+          padding-right: 0;
+         }
+       }
+     }
+   }
+ }
