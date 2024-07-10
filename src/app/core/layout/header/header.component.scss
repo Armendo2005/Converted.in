@@ -16,6 +16,11 @@
      background-color: $main-color-light;     
      .navbar-nav{
       gap: 24px;
+      display: flex;      
+      height: 38px;
+      padding: 0px 48px;
+      align-items: center;
+      flex-shrink: 0;
        .nav-item{
          a{
           font-size: 13px;          
