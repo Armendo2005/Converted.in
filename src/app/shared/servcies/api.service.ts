@@ -9,6 +9,12 @@ import { ProductsList } from '../models/products-list.model';
   providedIn: 'root',
 })
 export class ApiService {
+  ProductsListChanged: EventEmitter <Product[]> = new EventEmitter();
+  CartChanged: EventEmitter <Product[]> = new EventEmitter();
+  cardProduct: Product[] = [];
+  ProductsListing: Product[] = [];
+  pageList: EventEmitter <string[]> = new EventEmitter();
+
   constructor(private httpClient: HttpClient) {}
 
   headers = new HttpHeaders()

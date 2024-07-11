@@ -5,7 +5,9 @@ body{
   background-color:$secondry-color ;
   font-family:$main-font-en ;
 }
-
+a{
+  cursor: pointer;
+}
 /*------Change Scrollbar------*/
 .flipped{
   direction: rtl;

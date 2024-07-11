@@ -1,1 +1,112 @@
-<p>product-details works!</p>
+<div id="product-details">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-3">
+            <ul class="list-group list-group-flush">
+              <ng-container *ngFor="let img of productImages">
+                <li
+                  class="list-group-item p-0 mb-3"
+                  (click)="switchImages(img)"
+                >
+                  <img src="{{ img }}" class="card-img" />
+                </li>
+              </ng-container>
+            </ul>
+          </div>
+          <div class="col-9 align-self-center justify-content-center d-flex">
+            <img src="{{ productImageSrc }}" class="img-fluid mx-h-650" />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 p-md-0">
+        <h6 class="product-title">{{ Product.title }}</h6>
+        <div class="sku">Model Number: {{ Product.sku }}</div>
+        <div class="item-price mt-3">
+          <span class="rating-border">
+            <img src="assets/images/star.svg" class="" alt="star" />
+            <span class="product-rating">{{ Product.rating }}</span>
+            <span class="reviews-length px-1">
+              ({{ Product.reviews?.length }})
+            </span>
+          </span>
+          <h4 class="my-3">
+            <span class="currency px-1">EGB</span>
+            <strong>{{ Product.price }}</strong>
+          </h4>
+        </div>
+        <div class="free-delivery">
+          <span class="text">Free Delivery by Tomorrow</span>
+          <span class="delivery-time">order in 6 hrs 46 min </span>
+        </div>
+
+        <div class="monthly-payment">
+          <span class="text">Monthly payment plans from EGP 778</span>
+          <span class="view-details"> View more details </span>
+        </div>
+
+        <div class="pb-3">
+          <img src="assets/images/image.png" class="" alt="image" />
+        </div>
+        <div class="d-flex align-items-center">
+          <div class="w-25">
+            <div class="dropdown show">
+              <a
+                class="btn badge-light border dropdown-toggle"
+                role="button"
+                id="dropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                QTY
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item">1</a>
+                <a class="dropdown-item">2</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-75">
+            <button class="btn cart-btn" (click)="cartAdded()">
+              Add To Cart
+            </button>
+          </div>
+        </div>
+        <!-- <div
+          class="alert alert-warning fade show text-capitalize"
+          *ngIf="warningFlg"
+        >
+          <strong>Warning</strong> this product Added Before
+          <button type="button" class="close" (click)="warningFlg = false">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+      </div>
+      <div class="col-md-3 p-0">
+        <app-internal-side-details></app-internal-side-details>
+      </div>
+      <div class="col-12 my-3">
+        <h5 class="overview">Overview</h5>
+        <p class="product-desc">{{ Product.description }}</p>
+      </div>
+      <div class="col-12 my-3">
+        <h5 class="highlight">Highlight</h5>
+        <ul>
+          <li><b>Return Policy:</b> {{ Product.returnPolicy }}</li>
+          <li><b>Stock:</b> {{ Product.stock }}</li>
+          <li><b>Availability:</b> {{ Product.availabilityStatus }}</li>
+          <li><b>Category:</b> {{ Product.category }}</li>
+          <li><b>Brand:</b> {{ Product.brand }}</li>
+          <li>
+            <b>Dimensions:</b> 
+            width: {{ Product.dimensions?.width }} x 
+            height: {{ Product.dimensions?.height }} x 
+            depth: {{ Product.dimensions?.depth }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

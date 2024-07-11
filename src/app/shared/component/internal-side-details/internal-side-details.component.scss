@@ -1,0 +1,35 @@
+#policy {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+
+  .policy-item {
+    display: flex;
+    height: 39px;
+    padding-right: 30px;
+    align-items: flex-start;
+    gap: 12px;
+    .item-wrapper {
+      display: flex;
+      height: 39px;
+      padding-bottom: 1.6px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 4.5px;
+      .item-title {
+        color: #344054;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+      }
+      .item-desc{
+        color: #7E859B;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+      }
+    }
+  }
+}

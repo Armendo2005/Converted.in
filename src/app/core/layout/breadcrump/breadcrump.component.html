@@ -1,19 +1,16 @@
 <div class="">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <ng-container>
-        <li class="breadcrumb-item">
-          <a>
+      <ng-container *ngFor="let page of PageList; let i = index">
+        <li *ngIf="i === 0" class="breadcrumb-item">
+          <a (click)="NavigateHome()">
             <img src="assets/images/home-line.svg" />
           </a>
         </li>
-        <li class="breadcrumb-item text-capitalize"><span></span></li>
+        <li *ngIf="i !== 0" class="breadcrumb-item text-capitalize">
+          <span>{{ page }}</span>
+        </li>
       </ng-container>
-
     </ol>
   </nav>
 </div>
-
-
-
-

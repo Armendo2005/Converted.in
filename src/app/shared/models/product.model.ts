@@ -1,5 +1,5 @@
 export class Product {
-  id!: number;
+  id!: string;
   title!: string;
   description!: string;
   price!: number;
@@ -9,5 +9,14 @@ export class Product {
   brand!: string;
   category!: string;
   thumbnail!: string;
+  returnPolicy!: string;
+  sku!: string;
+  availabilityStatus!: string;
+  dimensions!:{
+    width?: string;
+    height?: string;
+    depth?: string;
+  };
+  reviews!: string[];
   images!: string[];
 }
